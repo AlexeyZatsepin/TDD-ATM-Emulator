@@ -8,6 +8,7 @@ package ua.pti.myatm;
 
 import org.junit.Test;
 
+import org.mockito.InOrder;
 import org.mockito.Mockito;
 
 import static org.junit.Assert.*;
@@ -22,7 +23,7 @@ public class ATMTest {
     @Test
     public void testGetMoneyInATM() {
         System.out.println("getMoneyInATM");
-        ATM test = Mockito.mock(ATM.class);
+        ATM test = new ATM(0.0);
         double expResult = 0.0;
         double result = test.getMoneyInATM();
         assertEquals(expResult, result, 0.0);
@@ -37,8 +38,9 @@ public class ATMTest {
         boolean expResult = false;
         boolean result = test.validateCard(card, pinCode);
         assertEquals(expResult, result);
-        verify(card).checkPin(pinCode);
-        verify(card).isBlocked();
+        InOrder inOrder=inOrder(card);
+        inOrder.verify(card,times(1)).isBlocked();
+        inOrder.verify(card,times(1)).checkPin(pinCode);
     }
     @Test
     public void testValidateCardTrue() throws NotCardInserted {
@@ -51,8 +53,10 @@ public class ATMTest {
         boolean expResult = true;
         boolean result = test.validateCard(card, pinCode);
         assertEquals(expResult, result);
-        verify(card).checkPin(pinCode);
-        verify(card).isBlocked();
+        InOrder inOrder=inOrder(card);
+        inOrder.verify(card,times(1)).isBlocked();
+        inOrder.verify(card,times(1)).checkPin(pinCode);
+
     }
     @Test
     public void testCheckBalance() throws NotCardInserted {
@@ -66,8 +70,9 @@ public class ATMTest {
         double expResult = 0.0;
         double result = test.checkBalance();
         assertEquals(expResult, result, 0.0);
-        verify(card).getAccount();
-        verify(account).getBalance();
+        InOrder inOrder=inOrder(card,account);
+        inOrder.verify(card,times(1)).getAccount();
+        inOrder.verify(account,times(1)).getBalance();
     }
 
     @Test(expected = UnsupportedOperationException.class)
@@ -80,6 +85,7 @@ public class ATMTest {
         Account account = Mockito.mock(Account.class);
         when(card.getAccount()).thenReturn(account);
         atm.getCash(amount);
+
     }
 
 
@@ -166,6 +172,11 @@ public class ATMTest {
         when(account.getBalance()).thenReturn(balance-amount);
         assertEquals(atm.getMoneyInATM(),atmMoney-amount, 0.0);
         assertEquals(atm.checkBalance(),balance-amount, 0.0);
+        InOrder inOrder = inOrder(card,account);
+        inOrder.verify(card,times(1)).isBlocked();
+        inOrder.verify(card,times(1)).checkPin(pin);
+        inOrder.verify(card,times(4)).getAccount();
+        inOrder.verify(account,times(1)).getBalance();
     }
     @Test(expected = UnsupportedOperationException.class)
     public void testConstructor(){
