@@ -167,4 +167,8 @@ public class ATMTest {
         assertEquals(atm.getMoneyInATM(),atmMoney-amount, 0.0);
         assertEquals(atm.checkBalance(),balance-amount, 0.0);
     }
+    @Test(expected = UnsupportedOperationException.class)
+    public void testConstructor(){
+        ATM atm = new ATM(-10.0);
+    }
 }
