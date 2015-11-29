@@ -10,6 +10,10 @@ import org.junit.Test;
 
 import org.mockito.InOrder;
 import org.mockito.Mockito;
+import org.mockito.internal.matchers.Null;
+import ua.pti.myatm.Exeptions.NotCardInserted;
+import ua.pti.myatm.Exeptions.NotEnoughtMoneyInATM;
+import ua.pti.myatm.Exeptions.NotEnoughtMoneyInAccount;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -30,17 +34,32 @@ public class ATMTest {
     }
 
     @Test
-    public void testValidateCardFalse() throws NotCardInserted {
-        System.out.println("validateCardFalse");
+    public void testValidateCardBlocked() throws NotCardInserted {
+        System.out.println("validateCardBlocked");
         Card card = Mockito.mock(Card.class);
         int pinCode = 0;
         ATM test = new ATM(1000.0);
-        boolean expResult = false;
+        when(card.isBlocked()).thenReturn(true);
+        when(card.checkPin(pinCode)).thenReturn(true);
         boolean result = test.validateCard(card, pinCode);
-        assertEquals(expResult, result);
-        InOrder inOrder=inOrder(card);
-        inOrder.verify(card,times(1)).isBlocked();
-        inOrder.verify(card,times(1)).checkPin(pinCode);
+        assertFalse(result);
+        verify(card,times(1)).isBlocked();
+    }
+    @Test
+    public void testValidateCardNoValidPin() throws NotCardInserted {
+        System.out.println("ValidateCardNoValidPin");
+        Card card = Mockito.mock(Card.class);
+        int pin=1000;
+        ATM atm=new ATM(200);
+        when(card.checkPin(pin)).thenReturn(false);
+        assertFalse(atm.validateCard(card,pin));
+    }
+    @Test(expected = NullPointerException.class)
+    public void testValidateCardNullCard() throws NotCardInserted {
+        System.out.println("ValidateCardNullCard");
+        int pin=1023;
+        ATM atm=new ATM(100);
+        atm.validateCard(null,pin);
     }
     @Test
     public void testValidateCardTrue() throws NotCardInserted {
@@ -135,8 +154,11 @@ public class ATMTest {
         when(account.getBalance()).thenReturn(balance);
         when(card.checkPin(pin)).thenReturn(true);
         when(card.getAccount().withdrow(amount)).thenReturn(balance-amount);
+        InOrder inOrder=inOrder(card,account);
         atm.validateCard(card,pin);
         atm.getCash(amount);
+        inOrder.verify(card).getAccount();
+        inOrder.verify(account).getBalance();
     }
 
     @Test(expected = NotEnoughtMoneyInATM.class)
