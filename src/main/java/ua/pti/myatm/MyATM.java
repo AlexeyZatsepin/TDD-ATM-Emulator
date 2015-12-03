@@ -1,9 +1,5 @@
 package ua.pti.myatm;
 
-import ua.pti.myatm.Exeptions.NotCardInserted;
-import ua.pti.myatm.Exeptions.NotEnoughtMoneyInATM;
-import ua.pti.myatm.Exeptions.NotEnoughtMoneyInAccount;
-
 public class MyATM {
 
     public static void main(String[] args) throws NotEnoughtMoneyInATM, NotEnoughtMoneyInAccount, NotCardInserted {

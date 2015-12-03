@@ -1,9 +1,5 @@
 package ua.pti.myatm;
 
-import ua.pti.myatm.Exeptions.NotCardInserted;
-import ua.pti.myatm.Exeptions.NotEnoughtMoneyInATM;
-import ua.pti.myatm.Exeptions.NotEnoughtMoneyInAccount;
-
 public class ATM {
 
     private double moneyInATM;

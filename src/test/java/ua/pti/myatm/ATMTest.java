@@ -10,10 +10,6 @@ import org.junit.Test;
 
 import org.mockito.InOrder;
 import org.mockito.Mockito;
-import org.mockito.internal.matchers.Null;
-import ua.pti.myatm.Exeptions.NotCardInserted;
-import ua.pti.myatm.Exeptions.NotEnoughtMoneyInATM;
-import ua.pti.myatm.Exeptions.NotEnoughtMoneyInAccount;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -33,9 +29,9 @@ public class ATMTest {
         assertEquals(expResult, result, 0.0);
     }
 
-    @Test
-    public void testValidateCardBlocked() throws NotCardInserted {
-        System.out.println("validateCardBlocked");
+    @Test(timeout = 1)
+    public void testValidateBlockedCard() throws NotCardInserted {
+        System.out.println("validateBlockedCard");
         Card card = Mockito.mock(Card.class);
         int pinCode = 0;
         ATM test = new ATM(1000.0);
@@ -52,6 +48,7 @@ public class ATMTest {
         int pin=1000;
         ATM atm=new ATM(200);
         when(card.checkPin(pin)).thenReturn(false);
+        when(card.isBlocked()).thenReturn(false);
         assertFalse(atm.validateCard(card,pin));
     }
     @Test(expected = NullPointerException.class)
@@ -104,7 +101,6 @@ public class ATMTest {
         Account account = Mockito.mock(Account.class);
         when(card.getAccount()).thenReturn(account);
         atm.getCash(amount);
-
     }
 
 
@@ -174,7 +170,7 @@ public class ATMTest {
         atm.getCash(1100.0);
     }
 
-    @Test
+    @Test(timeout = 2)
     public void testGetCashNotZeroBalance() throws NotCardInserted, NotEnoughtMoneyInAccount, NotEnoughtMoneyInATM {
         System.out.println("getCashNotZeroBalance");
         double atmMoney = 1000.0;

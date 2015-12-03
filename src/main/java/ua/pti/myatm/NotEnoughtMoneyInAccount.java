@@ -1,4 +1,4 @@
-package ua.pti.myatm.Exeptions;
+package ua.pti.myatm;
 
 /**
  * Created by Alex on 11/24/15.
