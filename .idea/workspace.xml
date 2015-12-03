@@ -5,15 +5,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/pti/myatm/Exeptions/NotCardInserted.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/pti/myatm/Exeptions/NotEnoughtMoneyInATM.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/pti/myatm/Exeptions/NotEnoughtMoneyInAccount.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ua/pti/myatm/Exeptions/NotCardInserted.java" afterPath="$PROJECT_DIR$/src/main/java/ua/pti/myatm/NotCardInserted.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ua/pti/myatm/Exeptions/NotEnoughtMoneyInATM.java" afterPath="$PROJECT_DIR$/src/main/java/ua/pti/myatm/NotEnoughtMoneyInATM.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ua/pti/myatm/Exeptions/NotEnoughtMoneyInAccount.java" afterPath="$PROJECT_DIR$/src/main/java/ua/pti/myatm/NotEnoughtMoneyInAccount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/pti/myatm/ATM.class" afterPath="$PROJECT_DIR$/target/classes/ua/pti/myatm/ATM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/pti/myatm/MyATM.class" afterPath="$PROJECT_DIR$/target/classes/ua/pti/myatm/MyATM.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/ua/pti/myatm/ATMTest.class" afterPath="$PROJECT_DIR$/target/test-classes/ua/pti/myatm/ATMTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/pti/myatm/ATM.java" afterPath="$PROJECT_DIR$/src/main/java/ua/pti/myatm/ATM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/pti/myatm/MyATM.java" afterPath="$PROJECT_DIR$/src/main/java/ua/pti/myatm/MyATM.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ua/pti/myatm/ATMTest.java" afterPath="$PROJECT_DIR$/src/test/java/ua/pti/myatm/ATMTest.java" />
     </list>
     <ignored path="labaJUnitRad.iws" />
@@ -31,7 +23,7 @@
     <SUITE FILE_PATH="coverage/labaJUnitRad$ATMTest_testGetCashNotZeroBalance.coverage" NAME="ATMTest.testGetCashNotZeroBalance Coverage Results" MODIFIED="1448438415734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ua.pti.myatm.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/labaJUnitRad$ATMTest.coverage" NAME="ATMTest Coverage Results" MODIFIED="1449138979617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/labaJUnitRad$ATMTest.coverage" NAME="ATMTest Coverage Results" MODIFIED="1449156504714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ua.pti.myatm.*</FILTER>
     </SUITE>
   </component>
@@ -71,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/pti/myatm/ATM.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+              <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -90,12 +82,12 @@
       <file leaf-file-name="ATMTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ua/pti/myatm/ATMTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0819672">
-              <caret line="200" column="27" selection-start-line="200" selection-start-column="27" selection-end-line="200" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.57211536">
+              <caret line="202" column="35" selection-start-line="202" selection-start-column="35" selection-end-line="202" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7601#7602#0" expanded="true" />
-                <element signature="e#7641#7642#0" expanded="true" />
+                <element signature="e#8069#8070#0" expanded="true" />
+                <element signature="e#8109#8110#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,9 +107,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/ua/pti/myatm/NotEnoughtMoneyInATM.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/pti/myatm/NotCardInserted.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/pti/myatm/ATM.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/pti/myatm/ATMTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/pti/myatm/NotCardInserted.java" />
       </list>
     </option>
   </component>
@@ -134,10 +126,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="550" />
-    <option name="y" value="23" />
-    <option name="width" value="816" />
-    <option name="height" value="700" />
+    <option name="width" value="1366" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -267,6 +257,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -836,44 +827,44 @@
       <workItem from="1448548354314" duration="460000" />
       <workItem from="1448825061776" duration="1344000" />
       <workItem from="1449077904889" duration="791000" />
-      <workItem from="1449137959228" duration="1323000" />
+      <workItem from="1449137959228" duration="5036000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ATMTest - 2015.12.03 at 12h 21m 24s.xml">
+    <history-entry file="ATMTest - 2015.12.03 at 17h 26m 08s.xml">
       <configuration name="ATMTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ATMTest - 2015.12.03 at 12h 24m 07s.xml">
+    <history-entry file="ATMTest - 2015.12.03 at 17h 28m 29s.xml">
       <configuration name="ATMTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ATMTest - 2015.12.03 at 12h 24m 33s.xml">
+    <history-entry file="ATMTest - 2015.12.03 at 17h 30m 03s.xml">
       <configuration name="ATMTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ATMTest - 2015.12.03 at 12h 26m 19s.xml">
+    <history-entry file="ATMTest - 2015.12.03 at 17h 31m 26s.xml">
       <configuration name="ATMTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ATMTest - 2015.12.03 at 12h 27m 57s.xml">
+    <history-entry file="ATMTest - 2015.12.03 at 17h 31m 51s.xml">
       <configuration name="ATMTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ATMTest - 2015.12.03 at 12h 28m 29s.xml">
+    <history-entry file="ATMTest - 2015.12.03 at 17h 34m 26s.xml">
       <configuration name="ATMTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ATMTest - 2015.12.03 at 12h 29m 41s.xml">
+    <history-entry file="ATMTest - 2015.12.03 at 17h 34m 50s.xml">
       <configuration name="ATMTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ATMTest - 2015.12.03 at 12h 32m 00s.xml">
+    <history-entry file="ATMTest - 2015.12.03 at 17h 36m 15s.xml">
       <configuration name="ATMTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ATMTest - 2015.12.03 at 12h 35m 13s.xml">
+    <history-entry file="ATMTest - 2015.12.03 at 17h 36m 40s.xml">
       <configuration name="ATMTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ATMTest - 2015.12.03 at 12h 36m 24s.xml">
+    <history-entry file="ATMTest - 2015.12.03 at 17h 37m 07s.xml">
       <configuration name="ATMTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33762000" />
+    <option name="totallyTimeSpent" value="37475000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -885,21 +876,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="550" y="23" width="816" height="700" extended-state="0" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38651314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38538682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35197368" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2997416" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15081967" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36389685" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20015106" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1299342" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.52067184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16993958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1014,8 +1005,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7601#7602#0" expanded="true" />
-            <element signature="e#7641#7642#0" expanded="true" />
+            <element signature="e#8069#8070#0" expanded="true" />
+            <element signature="e#8109#8110#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1066,8 +1057,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7601#7602#0" expanded="true" />
-            <element signature="e#7641#7642#0" expanded="true" />
+            <element signature="e#8069#8070#0" expanded="true" />
+            <element signature="e#8109#8110#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1186,8 +1177,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7601#7602#0" expanded="true" />
-            <element signature="e#7641#7642#0" expanded="true" />
+            <element signature="e#8069#8070#0" expanded="true" />
+            <element signature="e#8109#8110#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1238,8 +1229,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7601#7602#0" expanded="true" />
-            <element signature="e#7641#7642#0" expanded="true" />
+            <element signature="e#8069#8070#0" expanded="true" />
+            <element signature="e#8109#8110#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1324,19 +1315,19 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/pti/myatm/ATM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+          <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ua/pti/myatm/ATMTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0819672">
-          <caret line="200" column="27" selection-start-line="200" selection-start-column="27" selection-end-line="200" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.57211536">
+          <caret line="202" column="35" selection-start-line="202" selection-start-column="35" selection-end-line="202" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7601#7602#0" expanded="true" />
-            <element signature="e#7641#7642#0" expanded="true" />
+            <element signature="e#8069#8070#0" expanded="true" />
+            <element signature="e#8109#8110#0" expanded="true" />
           </folding>
         </state>
       </provider>

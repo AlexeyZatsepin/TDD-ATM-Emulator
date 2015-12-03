@@ -10,14 +10,11 @@ import org.junit.Test;
 
 import org.mockito.InOrder;
 import org.mockito.Mockito;
+import sun.tools.asm.CatchData;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
-/**
- *
- * @author andrii
-*/
 public class ATMTest {
 
     @Test
@@ -87,10 +84,20 @@ public class ATMTest {
         double result = test.checkBalance();
         assertEquals(expResult, result, 0.0);
         InOrder inOrder=inOrder(card,account);
+        inOrder.verify(card,times(1)).isBlocked();
         inOrder.verify(card,times(1)).getAccount();
         inOrder.verify(account,times(1)).getBalance();
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testCheckBalanceNoValidCard() throws NotCardInserted {
+        System.out.println("checkBalanceNoValidCard");
+        ATM atm=new ATM(1000);
+        Card card=Mockito.mock(Card.class);
+        atm.setCard(card);
+        when(card.isBlocked()).thenReturn(true);
+        atm.checkBalance();
+    }
     @Test(expected = UnsupportedOperationException.class)
     public void testGetCashAmountBellowZero() throws NotEnoughtMoneyInATM, NotEnoughtMoneyInAccount, NotCardInserted {
         System.out.println("getCashAmountBellowZero");
@@ -113,7 +120,7 @@ public class ATMTest {
     }
     @Test(expected = NotCardInserted.class)
     public void testGiveCardResidue() throws NotCardInserted {
-        System.out.println("testGiveCardResidue");
+        System.out.println("GiveCardResidue");
         ATM test = new ATM(0.0);
         Card mockCard=Mockito.mock(Card.class);
         test.setCard(mockCard);
@@ -170,7 +177,7 @@ public class ATMTest {
         atm.getCash(1100.0);
     }
 
-    @Test(timeout = 2)
+    @Test(timeout = 15)
     public void testGetCashNotZeroBalance() throws NotCardInserted, NotEnoughtMoneyInAccount, NotEnoughtMoneyInATM {
         System.out.println("getCashNotZeroBalance");
         double atmMoney = 1000.0;
@@ -194,7 +201,9 @@ public class ATMTest {
         inOrder.verify(card,times(1)).isBlocked();
         inOrder.verify(card,times(1)).checkPin(pin);
         inOrder.verify(card,times(4)).getAccount();
+        verify(account,times(1)).withdrow(amount);
         inOrder.verify(account,times(1)).getBalance();
+
     }
     @Test(expected = UnsupportedOperationException.class)
     public void testConstructor(){
